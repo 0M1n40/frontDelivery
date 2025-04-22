@@ -1,24 +1,41 @@
-.navbar-top {
-    background-color: #FF0011;
-    height: 40px; 
-  }
-  
-  .navbar-bottom {
-    background-color: #EFEFEF;
-    padding: 0.75rem 2rem;
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  .menu-item {
-    color: #FF0011;
-    font-weight: 400;
-    margin-left: 1.5rem;
-    cursor: pointer;
-    transition: color 0.3s ease;
-  }
-  
-  .menu-item:hover {
-    color: #cc0000; 
-  }
-  
+/* Zera margem e padding */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-
+
+/* Container geral da navbar */
+.navbar-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem 2rem;
+  z-index: 10;
+}
+
+/* Menu com itens alinhados à direita */
+.menu {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Estilo dos itens */
+.menu-item {
+  color: #EFEFEF;
+  font-weight: 400;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.menu-item:hover {
+  color: #ffffff;
+}
+
+.menu-item.active {
+  font-weight: bold;
+  color: #ffffff;
+}
