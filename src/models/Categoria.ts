@@ -1,5 +1,9 @@
-export interface Categoria {
-    id: number;
-    nome: string;
-    descricao: string;
-  }
+
+import Produto from "./Produto"
+
+export default interface Categoria {
+    id?: string,
+    nome: string
+    produto?: Produto[]
+}
+
