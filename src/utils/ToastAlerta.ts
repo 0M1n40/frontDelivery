@@ -1,4 +1,4 @@
-mport { toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 export function ToastAlerta(mensagem: string, tipo: string) {
     switch (tipo) {
@@ -41,7 +41,6 @@ export function ToastAlerta(mensagem: string, tipo: string) {
                 theme: 'colored',
                 progress: undefined,
             });
-            break;
-    }
-
+            break;
+    }
 }
