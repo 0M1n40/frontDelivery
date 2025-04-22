@@ -1,0 +1,50 @@
+.botao-cadastrar {
+    width: 100%;
+    max-width: 605px;
+    height: 65px;
+  
+    background: #181E4B;
+    border-radius: 38px;
+    border: none;
+    cursor: pointer;
+  
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: 0.08em;
+    color: #EFEFEF;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    transition: background 0.2s ease, transform 0.2s ease;
+    padding: 0 2rem;
+    margin: 2rem auto;
+    position: relative;
+}
+  
+.botao-cadastrar:hover {
+    background: #2c3575;
+    transform: scale(1.03);
+}
+  
+@media (max-width: 768px) {
+    .botao-cadastrar {
+        height: 55px;
+        font-size: 18px;
+        line-height: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    .botao-cadastrar {
+        height: 50px;
+        font-size: 16px;
+        padding: 0 1.5rem;
+    }
+}
+  
