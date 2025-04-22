@@ -8,7 +8,7 @@ function FormProduto() {
 
     const navigate = useNavigate();
 
-    const [produto, setProduto] = useState<>({} as )
+const [produto, setProduto] = useState<Produto>({} as Produto)
     const [isLoading, setIsLoading] = useState<boolean>(false)
 
 
@@ -16,9 +16,9 @@ function FormProduto() {
     const { id } = useParams<{ id: string }>();
 
 
-   async function buscarPorId(id: string) {
+async function buscarPorId(id: string) {
         try {
-            await buscar(/produtos/${id}, setProduto);
+            await buscar(`/produtos/${id}`, setProduto);
         } catch (error) {
             ToastAlerta('Erro ao buscar produto', 'erro');
         }
@@ -47,14 +47,14 @@ function atualizarEstado(e: ChangeEvent<HTMLInputElement>) {
 
         if (id !== undefined) {
             try {
-                await atualizar(/produtos, produto, setProduto);
+                await atualizar(`/produtos`, produto, setProduto);
                 ToastAlerta('O Produto foi atualizado com sucesso!', 'sucesso');
             } catch (error: any) {
                 ToastAlerta('Erro ao atualizar o produto.', 'erro');
             }
         } else {
             try {
-                await cadastrar(/produtos, produto, setProduto);
+                await cadastrar(`/produtos`, produto, setProduto);
                 ToastAlerta('O Produto foi cadastrado com sucesso!', 'sucesso');
             } catch (error: any) {
                 ToastAlerta('Erro ao cadastrar o produto.', 'erro');
