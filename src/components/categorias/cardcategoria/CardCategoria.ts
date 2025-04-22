@@ -13,7 +13,6 @@ function CardCategoria({ categoria }: CardCategoriaProps) {
                 hover:bg-red-700 transition duration-300 w-full'>
                 {categoria.descricao}
             </Link>
-          
             <div className="flex text-sm">
                 <Link to={`/editarcategoria/${categoria.id}`}
                     className='w-1/2 text-slate-100 bg-indigo-500 hover:bg-indigo-700 
