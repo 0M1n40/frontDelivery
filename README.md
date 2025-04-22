@@ -14,15 +14,15 @@ O sistema de delivery tem como principais funcionalidades:
 
 Este sistema visa melhorar o processo de pedidos e gerenciamento de clientes, tornando o serviço de entrega mais eficiente e fácil de usar.
 
-## 👥 Equipe do Projeto
+## 👥 **Equipe do Projeto**
 
-- **LA1SA0**
-- **correabeas**
-- **carolgonc**
-- **0M1n40**
-- **anakelys**
-- **desireeferreira**
-- **laura-azevedo**
+- [LA1SA0](https://github.com/LA1SA0)
+- [correabeas](https://github.com/correabeas)
+- [carolgonc](https://github.com/carolgonc)
+- [0M1n40](https://github.com/0M1n40)
+- [anakelys](https://github.com/anakelys)
+- [laura-azevedo](https://github.com/laura-azevedo)
+- [desireeferreira](https://github.com/desireeferreira)
 
 ## 🚀 Tecnologias Utilizadas
 
