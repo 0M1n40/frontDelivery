@@ -1,3 +1,4 @@
+
 import Produto from "./Produto"
 
 export default interface Categoria {
@@ -5,3 +6,4 @@ export default interface Categoria {
     nome: string
     produto?: Produto[]
 }
+
