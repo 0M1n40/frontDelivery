@@ -1,0 +1,17 @@
+:root {
+    --icon-color: #EFEFEF; 
+}
+
+.footer-background {
+    background-color: #FF0011;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.icon-footer {
+    fill: var(--icon-color); /* aplica a cor no SVG */
+}
+
+.footer-text {
+    color: var(--icon-color); /* Cor dos textos */
+}
