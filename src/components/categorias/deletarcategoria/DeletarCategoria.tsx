@@ -9,7 +9,7 @@ function DeletarCategoria() {
 
   useEffect(() => {
     if (id) {
-      fetch(`https://crud-farmacia-t80.onrender.com/categorias/${id}`)
+      fetch(`http://localhost:5000/categorias/${id}`)  
         .then((res) => res.json())
         .then((data) => setCategoria(data))
         .catch((err) => console.error("Erro ao buscar categoria:", err));
@@ -21,8 +21,8 @@ function DeletarCategoria() {
   }
 
   function deletarCategoria() {
-    fetch(`https://crud-farmacia-t80.onrender.com/categorias/${id}`, {
-      method: "DELETE",
+    fetch(`http://localhost:5000/categorias/${id}`, {
+      method: "DELETE", 
     })
       .then(() => {
         alert("Categoria deletada com sucesso!");
