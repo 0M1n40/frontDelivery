@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
-import { DNA } from "react-loader-spinner";
 import Categoria from "../../../models/Categoria";
 import CardCategoria from "../cardcategoria/CardCategoria";
-import { buscar } from "../../../service/Service";
 
 function ListaCategoria() {
     const [categorias, setCategorias] = useState<Categoria[]>([]);
@@ -21,16 +19,6 @@ function ListaCategoria() {
 
     return (
         <>
-            {categorias.length === 0 && (
-                <DNA
-                    visible={true}
-                    height="200"
-                    width="200"
-                    ariaLabel="dna-loading"
-                    wrapperStyle={{}}
-                    wrapperClass="dna-wrapper mx-auto"
-                />
-            )}
             <div className="flex justify-center w-full my-4">
                 <div className="container flex flex-col mx-2">
                     <div className='container mx-auto my-4 
