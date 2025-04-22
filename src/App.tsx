@@ -28,6 +28,16 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+
+      <Routes>
+
+      <Route path="/produto" element={<ListaProduto />} />
+
+
+      <Route path="/cadastrarproduto" element={<FormProduto />} />
+      <Route path="/editarproduto/:id" element={<FormProduto  />} />
+      <Route path="/deletarproduto/:id" element={<DeletarProduto />} />
+      </Routes>
     </>
   )
 }

@@ -7,6 +7,6 @@ export default interface Produto {
     descricao: string,
     preco: number,
     estoque: number,
-    categoria?: Categoria,
+    categoria: Categoria,
     usuario?: Usuario
 }
