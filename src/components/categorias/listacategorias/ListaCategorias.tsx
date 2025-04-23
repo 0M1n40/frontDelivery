@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
 import Categoria from "../../../models/Categoria";
 import CardCategoria from "../cardcategoria/CardCategoria";
+import { buscar } from "../../../service/Service";
 
 function ListaCategoria() {
     const [categorias, setCategorias] = useState<Categoria[]>([]);
 
     async function buscarCategoria() {
         try {
-            await buscar('/categoria', setCategorias)
+            await buscar('/categorias', setCategorias)
         } catch (error: any) {
             console.log(error)
         }

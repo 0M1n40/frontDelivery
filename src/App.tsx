@@ -9,11 +9,13 @@ import Home from './pages/home/Home';
 import Cadastro from './pages/cadastro/Cadastro';
 
 
+
 function App() {
   return (
     
     <Router>
       <Navbar />
+      
       <div className="min-h-[80vh]">
         
         <Routes>
@@ -25,6 +27,7 @@ function App() {
           <Route path="/categorias" element={<ListaCategoria />} />
           {/* Defina outras rotas conforme necessário */}
         </Routes>
+       
       </div>
       <Footer />
     </Router>

@@ -1,13 +1,16 @@
-import { ChangeEvent, useEffect, useState } from "react";
+
 import { useNavigate, useParams } from "react-router-dom";
 import Produto from "../../../models/Produto";
 import { ToastAlerta } from "../../../utils/ToastAlerta";
 import { atualizar, buscar, cadastrar, } from "../../../service/Service";
 import { RotatingLines } from "react-loader-spinner";
+import { ChangeEvent, useEffect, useState } from "react";
+
 
 function FormProduto() {
 
     const navigate = useNavigate();
+
 
     const [produto, setProduto] = useState<Produto>({} as Produto)
     const [isLoading, setIsLoading] = useState<boolean>(false)
@@ -15,6 +18,7 @@ function FormProduto() {
 
 
     const { id } = useParams<{ id: string }>();
+
 
 
    async function buscarPorNome(nome: string) {
@@ -27,6 +31,7 @@ function FormProduto() {
 
     useEffect(() => {
         if (id !== undefined) {
+
             buscarPorNome(id)
         }
     }, [id])
