@@ -15,7 +15,7 @@ function CardProduto({ produto }: CardProdutoProps) {
       />
 
       <div className="info-container">
-        <h2 className="nome-produto">{produto.nome}</h2>
+        <h2 className="nome-produto">{produto.descricao}</h2>
         <span className="preco-produto">R$ {produto.preco}</span>
       </div>
 
