@@ -3,8 +3,12 @@ import imgCadastro from '../../utils/img/imgCadastro.png';
 import Usuario from '../../models/Usuario';
 import { useNavigate } from 'react-router-dom';
 import BotaoCadastrar from '../../components/botaoCadastrar/BotaoCadastrar';
+<<<<<<< HEAD
 import { cadastrar, cadastrarUsuario } from '../../service/Service';
 import { ToastAlerta } from '../../utils/ToastAlerta';
+=======
+import { cadastrar } from '../../service/Service';
+>>>>>>> 9c28ccde90c12b84ab55ff0ce80bc467f1046669
 
 function Cadastro() {
     
@@ -34,8 +38,10 @@ function Cadastro() {
   
       if (usuario.senha.length >= 8) {
         try {
+
           await cadastrarUsuario(`/usuarios/cadastrar`, usuario, setUsuario);
           ToastAlerta('Usuário cadastrado com sucesso!', 'successo');
+
         } catch (error) {
           alert('Erro ao cadastrar o usuário!');
         }
