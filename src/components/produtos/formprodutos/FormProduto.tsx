@@ -8,18 +8,22 @@ import "./formproduto.css";
 import BotaoCadastrar from "../../botaoCadastrar/BotaoCadastrar";
 import BotaoAtualizar from "../../botaoCadastrar/BotaoAtualizar";
 
-function FormProduto() {
-  const navigate = useNavigate();
-  const [produto, setProduto] = useState<Produto>({
-    nome: "",
-    descricao: "",
-    preco: 0,
-    estoque: 0,
-    categoria: { id: "", nome: "" }
-  });
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [categoriaNome, setCategoriaNome] = useState<string>("");
-  const { id } = useParams<{ id: string }>();
+interface FormProdutoProps {
+    setAtualizarLista: React.Dispatch<React.SetStateAction<boolean>>;
+  }
+  
+function FormProduto({ setAtualizarLista }: FormProdutoProps) {
+    const navigate = useNavigate();
+    const [produto, setProduto] = useState<Produto>({
+        nome: "",
+        descricao: "",
+        preco: 0,
+        estoque: 0,
+        categoria: { id: "", nome: "" }
+    });
+    const [isLoading, setIsLoading] = useState<boolean>(false);
+    const [categoriaNome, setCategoriaNome] = useState<string>("");
+    const { id } = useParams<{ id: string }>();
 
   useEffect(() => {
     if (id !== undefined) {
@@ -75,6 +79,7 @@ function FormProduto() {
       } else {
         await cadastrar(`/produtos`, produto, setProduto);
         ToastAlerta("O Produto foi cadastrado com sucesso!", "sucesso");
+        setAtualizarLista(true);
       }
       navigate("/produtos");
     } catch {
