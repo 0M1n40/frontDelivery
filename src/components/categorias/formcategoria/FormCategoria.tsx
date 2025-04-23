@@ -2,8 +2,6 @@ import { ChangeEvent, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Categoria from "../../../models/Categoria";
 import { atualizar, buscar, cadastrar } from "../../../service/Service";
-import BotaoCadastrar from "../../botaoCadastrar/BotaoCadastrar";
-import BotaoAtualizar from "../../botaoCadastrar/BotaoAtualizar";
 
 function FormCategoria() {
   const navigate = useNavigate();
@@ -33,6 +31,10 @@ function FormCategoria() {
     });
   }
 
+  function retornar() {
+    navigate("/categorias");
+  }
+
   async function gerarNovaCategoria(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault();
     setIsLoading(true);
@@ -45,12 +47,11 @@ function FormCategoria() {
         await cadastrar(`/categorias`, categoria, setCategoria);
         alert("Categoria cadastrada com sucesso!");
       }
-
-      window.location.reload();
     } catch (error) {
       alert("Erro ao salvar a categoria.");
     } finally {
       setIsLoading(false);
+      retornar();
     }
   }
 
@@ -73,14 +74,12 @@ function FormCategoria() {
           />
         </div>
 
-        {isLoading ? (
-          <div className="text-center text-lg">Carregando...</div>
-        ) : (
-          // Renderizando diretamente o botão de cadastro ou atualização
-          <div className="w-full">
-            {id === undefined ? <BotaoCadastrar /> : <BotaoAtualizar />}
-          </div>
-        )}
+        <button
+          className="rounded text-white bg-indigo-500 hover:bg-indigo-700 w-full py-2 flex justify-center"
+          type="submit"
+        >
+          {isLoading ? "Carregando..." : id === undefined ? "Cadastrar" : "Atualizar"}
+        </button>
       </form>
     </div>
   );
