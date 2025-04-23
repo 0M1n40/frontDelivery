@@ -10,15 +10,15 @@ import Home from './pages/home/Home';
 
 function App() {
   return (
+    
     <Router>
+      <Navbar />
       <div className="min-h-[80vh]">
-        <Navbar />
+        
         <Routes>
           
            <Route path="/" element={<Home />} />
            <Route path="/home" element={<Home />} />
-           <Route path="/produtos" element={<Produtos />} /> 
-          <Route path="/categoria" element={<Categoria />} /> 
           <Route path="/cadastrar/:id" element={<CadastrarCategoria />} />
           <Route path="/deletarcategoria/:id" element={<DeletarCategoria />} />
           <Route path="/categorias" element={<ListaCategoria />} />

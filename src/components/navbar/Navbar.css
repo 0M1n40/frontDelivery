@@ -4,7 +4,14 @@ body, html {
   padding: 0;
 }
 
-.navbar-
+.navbar-top{
+  background-color: #FF0011;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem 2rem;
+  z-index: 10;
+}
 
 /* Container geral da navbar */
 .navbar-container {
@@ -17,14 +24,16 @@ body, html {
 
 /* Menu com itens alinhados à direita */
 .menu {
-  display: flex;
-  gap: 1.5rem;
+ 
+  display: block;
+  gap: 2rem;
   justify-content: flex-end;
   align-items: center;
 }
 
 /* Estilo dos itens */
 .menu-item {
+  padding: 1rem;
   color: #EFEFEF;
   font-weight: 400;
   cursor: pointer;
@@ -32,8 +41,10 @@ body, html {
 }
 
 .menu-item:hover {
-  color: #ffffff;
+  font-weight: bold;
+  
 }
+
 
 .menu-item.active {
   font-weight: bold;

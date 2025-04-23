@@ -1,3 +1,4 @@
+
 import './Navbar.css';
 
 function Navbar() {
@@ -7,11 +8,13 @@ function Navbar() {
      <div className="navbar-top w-full"></div>
     
     
-    <div className="navbar-container">
-      <div className="menu">
-        <span className="menu-item active">Home</span>
+    <div className="navbar-container ">
+      <div className="menu ">
+        <span className="menu-item">Home</span>
         <span className="menu-item">Produto</span>
         <span className="menu-item">Categorias</span>
+
+        
       </div>
     </div>
     </>

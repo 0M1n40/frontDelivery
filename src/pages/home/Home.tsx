@@ -5,17 +5,21 @@ import { Link } from "react-router-dom";
 function Home() {
   return (
     <>
-      <div className="home-container max-h-screen flex flex-col justify-between">
-      <div
-  className="home-hero text-white px-10 py-20"
+      <div className="home-container min-h-screen flex flex-col justify-between">
+      <div className="home-hero text-white px-1 py-22"
   style={{
     backgroundImage: `url(${home})`,
   }}
 >
-  <div className="content flex flex-col items-center justify-center gap-4">
+  
+  <Link to="/categorias">
+          <span className="menu-sair">Sair</span>
+        </Link>
+   
+  <div className="bg-amber-400 m-auto ">
     <Link
       to="/novoproduto"
-      className="mt-6 bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-6 rounded-full text-lg shadow-md transition duration-300"
+      className="botao-novo-produto"
     >
       NOVO PRODUTO
     </Link>
@@ -23,10 +27,11 @@ function Home() {
   </div>
 </div>
 
-        <div className="text-center py-16 bg-white">
-          <h2 className="text-3xl font-semibold text-gray-800">Meus produtos</h2>
+    <div className=" flex flex-col items-center justify-center gap-4 mt-10 ">
+          <h2 className="text-center text-3xl font-semibold text-gray-800">Meus produtos</h2>
         </div>
-      </div>
+        </div>
+     
     </>
   );
 }
