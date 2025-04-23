@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import loogo2 from "../../utils/img/loogo2.png";
@@ -37,3 +36,4 @@ function Navbar() {
 }
 
 export default Navbar;
+

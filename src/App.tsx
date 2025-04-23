@@ -25,13 +25,22 @@ function App() {
           <Route path="/cadastrar/:id" element={<CadastrarCategoria />} />
           <Route path="/deletarcategoria/:id" element={<DeletarCategoria />} />
           <Route path="/categorias" element={<ListaCategoria />} />
+           <Route path="/produto" element={<ListaProduto />} />
+ <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
+      <Route path="/produto" element={<ListaProduto />} />
+      <Route path="/cadastrarproduto" element={<FormProduto />} />
+      <Route path="/editarproduto/:id" element={<FormProduto  />} />
+      <Route path="/deletarproduto/:id" element={<DeletarProduto />} />
+            <Route path="/cadastrarproduto" element={<FormProduto />} />
+      <Route path="/editarproduto/:id" element={<FormProduto  />} />
+      <Route path="/deletarproduto/:id" element={<DeletarProduto />} />
+      </Routes>
+         <Footer />
           {/* Defina outras rotas conforme necessário */}
-        </Routes>
+   
        
       </div>
-      <Footer />
-    </Router>
-  );
-}
 
 export default App;
