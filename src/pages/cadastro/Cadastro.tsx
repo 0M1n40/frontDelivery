@@ -4,6 +4,7 @@ import Usuario from '../../models/Usuario';
 import { useNavigate } from 'react-router-dom';
 import BotaoCadastrar from '../../components/botaoCadastrar/BotaoCadastrar';
 import { cadastrar } from '../../service/Service';
+import { ToastAlerta } from '../../utils/ToastAlerta';
 
 function Cadastro() {
     
@@ -34,7 +35,7 @@ function Cadastro() {
       if (usuario.senha.length >= 8) {
         try {
           await cadastrar(`/usuarios/cadastrar`, usuario, setUsuario);
-          alert('Usuário cadastrado com sucesso!');
+          ToastAlerta('Usuário cadastrado com sucesso!', 'success');
         } catch (error) {
           alert('Erro ao cadastrar o usuário!');
         }
@@ -47,7 +48,7 @@ function Cadastro() {
     return (
       <div className="flex h-screen">
         <div className="bg-red-600 text-white flex flex-col justify-between items-center w-1/3 px-10 py-8">
-          <h1 className="text-4xl font-light text-center leading-snug">
+          <h1 className="text-4xl font-light text-left leading-snug">
             Mais que uma <br />
             plataforma, uma <strong className="font-bold">vitrine</strong><br />
             para o seu delivery!

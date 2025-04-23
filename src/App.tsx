@@ -6,6 +6,7 @@ import DeletarCategoria from './components/categorias/deletarcategoria/DeletarCa
 import Footer from './components/footer/Footer';
 import Navbar from './components/navbar/Navbar';
 import Home from './pages/home/Home';
+import Cadastro from './pages/cadastro/Cadastro';
 
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
       <div className="min-h-[80vh]">
         
         <Routes>
-          
+          <Route path="/usuarios/cadastrar" element={<Cadastro />} />
            <Route path="/" element={<Home />} />
            <Route path="/home" element={<Home />} />
           <Route path="/cadastrar/:id" element={<CadastrarCategoria />} />
