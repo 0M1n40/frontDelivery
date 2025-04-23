@@ -20,9 +20,12 @@ function Home() {
           <h2 className="text-center text-3xl font-semibold text-gray-800">
             Meus produtos
           </h2>
+
           <div className="modal-produto">
             <ModalProduto />
           </div>
+
+
         </div>
       </div>
     </>

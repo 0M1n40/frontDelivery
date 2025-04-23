@@ -19,7 +19,7 @@
   transition: all 0.3s ease;
   position: absolute;
   bottom: 170px;
-  left: 50%;
+  left: 37%;
   transform: translateX(-50%);
   z-index: 3;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
