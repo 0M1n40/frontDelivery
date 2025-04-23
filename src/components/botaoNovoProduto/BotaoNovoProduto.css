@@ -1,0 +1,47 @@
+.botao-novo-produto {
+    width: 100%;
+    max-width: 407px;
+    height: 93px;
+    background: #FF0011;
+    border-radius: 38px;
+    cursor: pointer;
+    
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 89px;
+    text-align: center;
+    letter-spacing: -0.04em;
+    color: #EFEFEF;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background 0.2s ease, transform 0.2s ease;
+    padding: 0 2rem;
+    margin: 2rem auto;
+    position: relative;
+}
+
+.botao-novo-produto:hover {
+    background: #FF3333;
+    transform: scale(1.01);
+}
+
+@media (max-width: 768px) {
+    .botao-novo-produto {
+        height: 75px;
+        font-size: 22px;
+        line-height: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .botao-novo-produto {
+        height: 60px;
+        font-size: 18px;
+        line-height: 50px;
+    }
+}
