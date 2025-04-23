@@ -1,11 +1,12 @@
 import './BotaoNovoProduto.css';
+import { Link } from 'react-router-dom';
 
 function BotaoNovoProduto() {
   return (
-    <button className="botao-novo-produto">
+    <Link to="/produtos" className="botao-novo-produto">
       <span className="button-text">NOVO PRODUTO</span>
-    </button>
+    </Link>
   );
-} 
+}
 
 export default BotaoNovoProduto;
