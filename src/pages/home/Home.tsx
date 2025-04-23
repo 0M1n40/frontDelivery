@@ -1,4 +1,3 @@
-import ListaProduto from "../../components/produtos/listaproduto/ListaProduto"
 import "./Home.css";
 import home from "../../utils/img/Home.png";
 import BotaoNovoProduto from "../../components/botaoNovoProduto/BotaoNovoProduto";
