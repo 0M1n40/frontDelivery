@@ -6,20 +6,16 @@ import DeletarCategoria from './components/categorias/deletarcategoria/DeletarCa
 import Footer from './components/footer/Footer';
 import Navbar from './components/navbar/Navbar';
 import Home from './pages/home/Home';
+import FormCategoria from './components/categorias/formcategoria/FormCategoria';
 
 function App() {
   return (
     <Router>
       <div className="min-h-[80vh]">
         <Routes>
-           <Route path="/" element={<Home />} />
-           <Route path="/home" element={<Home />} />
-           <Route path="/produtos" element={<Produtos />} /> 
-          <Route path="/categoria" element={<Categoria />} /> 
-          <Route path="/cadastrar/:id" element={<CadastrarCategoria />} />
-          <Route path="/deletarcategoria/:id" element={<DeletarCategoria />} />
-          <Route path="/categorias" element={<ListaCategoria />} />
-          {/* Defina outras rotas conforme necessário */}
+          <Route path="/" element={<ListaCategoria />} />
+           <Route path="/categorias" element={<ListaCategoria />} />
+          <Route path="/formcategoria/:id" element={<FormCategoria />} />
         </Routes>
       </div>
     </Router>
