@@ -1,16 +1,11 @@
 import './BotaoCadastrar.css';
 
-interface BotaoCadastrarProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  texto?: string;
-}
-
-function BotaoCadastrar({ texto = "Cadastrar", ...props }: BotaoCadastrarProps) {
+function BotaoCadastrar() {
   return (
-    <button className="botao-cadastrar" {...props}>
-      {texto}
+    <button className="botao-cadastrar">
+      Cadastrar
     </button>
   );
 }
 
 export default BotaoCadastrar;
-
