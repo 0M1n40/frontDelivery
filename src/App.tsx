@@ -6,9 +6,9 @@ import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
 import Home from "./pages/home/Home";
 import Cadastro from "./pages/cadastro/Cadastro";
-import ListaProduto from "./components/produtos/listaproduto/ListaProduto";
 import FormProduto from "./components/produtos/formprodutos/FormProduto";
 import DeletarProduto from "./components/produtos/deletarproduto/DeletarProduto";
+import Produto from "./pages/produto/Produto";
 
 function App() {
   return (
@@ -29,7 +29,7 @@ function App() {
           <Route path="/deletarcategoria/:id" element={<DeletarCategoria />} />
 
           {/* Produtos */}
-          <Route path="/produtos" element={<ListaProduto />} />
+          <Route path="/produtos" element={<Produto />} />
           <Route path="/cadastrarproduto" element={<FormProduto />} />
           <Route path="/editarproduto/:id" element={<FormProduto />} />
           <Route path="/deletarproduto/:id" element={<DeletarProduto />} />
