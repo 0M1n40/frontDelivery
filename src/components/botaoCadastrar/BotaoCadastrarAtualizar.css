@@ -1,4 +1,4 @@
-.botao-cadastrar {
+.botao-cadastrar-atualizar {
     width: 100%;
     max-width: 605px;
     height: 65px;
@@ -27,13 +27,13 @@
     position: relative;
 }
   
-.botao-cadastrar:hover {
+.botao-cadastrar-atualizar:hover {
     background: #2c3575;
     transform: scale(1.03);
 }
   
 @media (max-width: 768px) {
-    .botao-cadastrar {
+    .botao-cadastrar-atualizar {
         height: 55px;
         font-size: 18px;
         line-height: 36px;
@@ -41,7 +41,7 @@
 }
 
 @media (max-width: 480px) {
-    .botao-cadastrar {
+    .botao-cadastrar-atualizar {
         height: 50px;
         font-size: 16px;
         padding: 0 1.5rem;

@@ -23,6 +23,12 @@ export const buscar = async (url: string, setDados: Function) => {
     const resposta = await api.get(url)
     setDados(resposta.data)
 }
+
+export const buscarCategoriaPorNome = async (nome: string) => {
+    const resposta = await api.get(`/categorias/nome/${nome}`);
+    return resposta.data;
+};
+
 export const deletar = async (url: string) => { 
     await api.delete(url)
 
