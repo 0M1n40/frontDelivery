@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ListaCategoria from "./components/categorias/listacategorias/ListaCategorias";
 import CadastrarCategoria from "./components/categorias/cadastrarcategoria/CadastrarCategoria";
 import DeletarCategoria from "./components/categorias/deletarcategoria/DeletarCategoria";
+import FormCategoria from "./components/categorias/formcategoria/FormCategoria";
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
 import Home from "./pages/home/Home";
@@ -27,6 +28,7 @@ function App() {
           <Route path="/categorias" element={<ListaCategoria />} />
           <Route path="/cadastrar/:id" element={<CadastrarCategoria />} />
           <Route path="/deletarcategoria/:id" element={<DeletarCategoria />} />
+          <Route path="/formcategoria/:id" element={<FormCategoria />} />
 
           {/* Produtos */}
           <Route path="/produtos" element={<Produto />} />
