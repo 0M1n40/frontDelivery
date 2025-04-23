@@ -6,6 +6,6 @@ function BotaoNovoProduto() {
       <span className="button-text">NOVO PRODUTO</span>
     </button>
   );
-}
+} 
 
 export default BotaoNovoProduto;
