@@ -1,7 +1,7 @@
 import "./Home.css";
 import home from "../../utils/img/Home.png";
-import { Link } from "react-router-dom";
 import BotaoNovoProduto from "../../components/botaoNovoProduto/BotaoNovoProduto";
+
 
 function Home() {
   return (
@@ -13,9 +13,7 @@ function Home() {
             backgroundImage: `url(${home})`,
           }}
         >
-          <Link to="/usuarios/cadastrar" className="menu-sair">
-            Sair
-          </Link>
+      
 
           <BotaoNovoProduto />
         </div>

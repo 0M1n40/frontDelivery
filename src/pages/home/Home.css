@@ -9,7 +9,7 @@
 }
 
 .home-hero {
-  width: 105%;
+  width: 101%;
   height: 100%;
   padding: 2rem;
   display: flex;
@@ -27,27 +27,3 @@
   padding-top: 10vh;
 }
 
-.menu-sair {
-  width: 100px;
-  height: 40px;
-  padding: 7px 40px;
-  border: 1px solid white;
-  border-radius: 10px;
-  background: transparent;
-  color: #FFF5EC;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  position: absolute;
-  bottom: 90%;
-}
-
-.menu-sair:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  color: white;
-}
