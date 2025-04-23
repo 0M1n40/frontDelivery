@@ -19,11 +19,12 @@ function Home() {
       <div className="flex flex-col items-center justify-center gap-4 mt-10">
         <h2 className="text-center text-3xl font-semibold text-gray-800">
           Meus produtos
-        </h2>
-
-        <div className="modal-produto">
+          <div className="modal-produto">
           <ModalProduto /> 
         </div>
+        </h2>
+
+        
       </div>
     </>
   );
