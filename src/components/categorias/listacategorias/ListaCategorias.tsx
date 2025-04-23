@@ -80,9 +80,9 @@ function ListaCategoria() {
                                     className="w-full p-2 border border-gray-300 rounded focus:outline-none"
                                 />
 
-                            <button type="submit" className="w-full">
-                                <BotaoCadastrar />
-                            </button>
+                                <button type="submit" className="w-full">
+                                    <BotaoCadastrar />
+                                </button>
                             </form>
                         </div>
                     </div>

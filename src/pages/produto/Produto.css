@@ -1,0 +1,23 @@
+.produto-container {
+    min-height: 100vh;
+  }
+
+  .titulo-produtos {
+    position: absolute;
+    width: 461px;
+    height: 43px;
+    left: 435px;
+    top: 270px;
+  
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: 0.08em;
+  
+    color: #000000;
+  }
+  
+  

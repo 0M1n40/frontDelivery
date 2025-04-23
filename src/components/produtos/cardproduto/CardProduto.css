@@ -1,0 +1,80 @@
+.card-produto {
+  width: 100%;
+  max-width: 336px;
+  aspect-ratio: 336 / 313;
+  background: #ffffff;
+  border-radius: 29px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+}
+  
+.imagem-produto {
+  width: 100%;
+  height: 257px;
+  object-fit: cover;
+  border-top-left-radius: 29px;
+  border-top-right-radius: 29px;
+}
+
+.info-container {
+  height: 56px;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12px;
+  border-bottom-left-radius: 24px;
+  border-bottom-right-radius: 24px;
+}
+
+.nome-produto {
+  color: #5E6282;
+  font-weight: 500;
+  font-size: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.preco-produto {
+  color: #5E6282;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.botoes-container {
+  display: flex;
+  margin-top: 8px;
+}
+
+.botao {
+  flex: 1;
+  text-align: center;
+  padding: 8px 0;
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.botao.editar {
+  background-color: #181E4B;
+  border-bottom-left-radius: 24px;
+}
+
+.botao.deletar {
+  background-color: #FF0011;
+  border-bottom-right-radius: 24px;
+}
+
+.botao.editar:hover {
+  background-color: #181E6F;
+}
+
+.botao.deletar:hover {
+  background-color: #FF0033;
+}
+  
