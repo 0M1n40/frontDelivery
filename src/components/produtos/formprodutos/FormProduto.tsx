@@ -1,14 +1,18 @@
-import { ChangeEvent, useEffect, useState } from "react";
-import { RotatingLines } from "react-loader-spinner";
-import { useNavigate, useParams } from "react-router-dom";
 
+import { useNavigate, useParams } from "react-router-dom";
+import Produto from "../../../models/Produto";
 import { ToastAlerta } from "../../../utils/ToastAlerta";
+import { atualizar, buscar, cadastrar, } from "../../../service/Service";
+import { RotatingLines } from "react-loader-spinner";
+import { ChangeEvent, useEffect, useState } from "react";
+
 
 function FormProduto() {
 
     const navigate = useNavigate();
 
-const [produto, setProduto] = useState<Produto>({} as Produto)
+
+    const [produto, setProduto] = useState<Produto>({} as Produto)
     const [isLoading, setIsLoading] = useState<boolean>(false)
 
 
@@ -16,9 +20,10 @@ const [produto, setProduto] = useState<Produto>({} as Produto)
     const { id } = useParams<{ id: string }>();
 
 
-async function buscarPorId(id: string) {
+
+   async function buscarPorNome(nome: string) {
         try {
-            await buscar(`/produtos/${id}`, setProduto);
+            await buscar(`/produtos/${nome}`, setProduto);
         } catch (error) {
             ToastAlerta('Erro ao buscar produto', 'erro');
         }
@@ -26,7 +31,8 @@ async function buscarPorId(id: string) {
 
     useEffect(() => {
         if (id !== undefined) {
-            buscarPorId(id)
+
+            buscarPorNome(id)
         }
     }, [id])
 

@@ -1,0 +1,53 @@
+/* Zera margem e padding */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-top{
+  background-color: #FF0011;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem 2rem;
+  z-index: 10;
+}
+
+/* Container geral da navbar */
+.navbar-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem 2rem;
+  z-index: 10;
+}
+
+/* Menu com itens alinhados à direita */
+.menu {
+ 
+  display: block;
+  gap: 2rem;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Estilo dos itens */
+.menu-item {
+  font-family: 'Poppins', sans-serif;
+  padding: 1rem;
+  color: #EFEFEF;
+  font-weight: 400;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.menu-item:hover {
+  font-weight: bold;
+  
+}
+
+
+.menu-item.active {
+  font-weight: bold;
+  color: #ffffff;
+}
