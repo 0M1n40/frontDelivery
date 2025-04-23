@@ -4,7 +4,6 @@ import Usuario from '../../models/Usuario';
 import { useNavigate } from 'react-router-dom';
 import BotaoCadastrar from '../../components/botaoCadastrar/BotaoCadastrar';
 import { cadastrar } from '../../service/Service';
-import { ToastAlerta } from '../../utils/ToastAlerta';
 
 function Cadastro() {
     
@@ -35,7 +34,7 @@ function Cadastro() {
       if (usuario.senha.length >= 8) {
         try {
           await cadastrar(`/usuarios/cadastrar`, usuario, setUsuario);
-          ToastAlerta('Usuário cadastrado com sucesso!', 'success');
+          alert('Usuário cadastrado com sucesso!');
         } catch (error) {
           alert('Erro ao cadastrar o usuário!');
         }
