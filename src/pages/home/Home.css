@@ -5,6 +5,9 @@
 .home-container {
   width: 100%;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   overflow: hidden;
 }
 
@@ -27,3 +30,42 @@
   padding-top: 10vh;
 }
 
+.home-hero, .home-container {
+  padding-bottom: 20px;
+}
+
+.home-container .flex {
+  margin-top: 10px;
+  margin-bottom: 80px;
+}
+
+.home-container .flex .modal-produto {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+}
+
+@media (max-width: 768px) {
+  .home-hero {
+    padding: 1rem;
+  }
+
+  .home-container .flex {
+    margin-bottom: 60px;
+  }
+
+  .home-container .flex .modal-produto {
+    width: 90%;
+    margin: 15px auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .home-container .flex .modal-produto {
+    width: 95%;
+  }
+}
