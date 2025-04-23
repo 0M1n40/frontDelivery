@@ -29,7 +29,7 @@ function App() {
           <Route path="/categorias" element={<ListaCategoria />} />
           <Route path="/cadastrar/:id" element={<CadastrarCategoria />} />
           <Route path="/deletarcategoria/:id" element={<DeletarCategoria />} />
-          <Route path="/formcategoria/:id" element={<FormCategoria />} />
+          <Route path="/formcategoria/" element={<FormCategoria />} />
 
           {/* Produtos */}
           <Route path="/produtos" element={<Produto />} />

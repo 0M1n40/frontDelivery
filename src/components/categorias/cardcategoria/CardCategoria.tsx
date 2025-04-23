@@ -3,6 +3,7 @@ import Categoria from '../../../models/Categoria';
 
 interface CardCategoriaProps {
     categoria: Categoria;
+
 }
 
 function CardCategoria({ categoria }: CardCategoriaProps) {
@@ -13,7 +14,7 @@ function CardCategoria({ categoria }: CardCategoriaProps) {
                 className="bg-red-600 text-white font-medium text-center py-3 px-5 
                 hover:bg-red-700 transition duration-300 w-full"
             >
-                Categorias
+                {categoria.nome}
             </Link>
 
             <div className="flex text-sm">

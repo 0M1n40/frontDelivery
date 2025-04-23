@@ -42,7 +42,7 @@ function ListaCategoria() {
 
     useEffect(() => {
         buscarCategoria();
-    }, []);
+    }, [categorias.length]);
 
     return (
         <div className="bg-gray-100 min-h-screen">
@@ -80,8 +80,9 @@ function ListaCategoria() {
                                     className="w-full p-2 border border-gray-300 rounded focus:outline-none"
                                 />
 
-                                <button type="submit" className="w-full">
-                                    <BotaoCadastrar />
+                                <button type="submit" className="w-full"> Enviar
+                                    {/* <BotaoCadastrar /> */}
+                                    
                                 </button>
                             </form>
                         </div>

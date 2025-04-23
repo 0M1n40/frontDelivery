@@ -1,11 +1,11 @@
 import './BotaoCadastrarAtualizar.css';
 
-function BotaoCadastrar() {
+function BotaoAtualizar() {
   return (
-    <button className="botao-cadastrar-atualizar">
+    <button type='submit' className="botao-cadastrar-atualizar">
       Atualizar
     </button>
   );
 }
 
-export default BotaoCadastrar;
+export default BotaoAtualizar;

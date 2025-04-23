@@ -3,12 +3,13 @@ import { useNavigate, useParams } from "react-router-dom";
 import Categoria from "../../../models/Categoria";
 import { atualizar, buscar, cadastrar } from "../../../service/Service";
 import BotaoCadastrar from "../../botaoCadastrar/BotaoCadastrar";
+import BotaoAtualizar from "../../botaoCadastrar/BotaoAtualizar";
 
 function FormCategoria() {
   const navigate = useNavigate();
   const { id } = useParams<{ id: string }>();
 
-  const [categoria, setCategoria] = useState<Categoria>({} as Categoria);
+  const [categoria, setCategoria] = useState<Categoria>({ nome: "" });
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   async function buscarPorId(id: string) {
@@ -45,10 +46,10 @@ function FormCategoria() {
         alert("Categoria cadastrada com sucesso!");
       }
 
-      setIsLoading(false);
-      setTimeout(() => navigate("/categorias"), 100); 
+      window.location.reload();
     } catch (error) {
       alert("Erro ao salvar a categoria.");
+    } finally {
       setIsLoading(false);
     }
   }
@@ -75,9 +76,10 @@ function FormCategoria() {
         {isLoading ? (
           <div className="text-center text-lg">Carregando...</div>
         ) : (
-          <button type="submit" className="w-full">
-            <BotaoCadastrar />
-          </button>
+          // Renderizando diretamente o botão de cadastro ou atualização
+          <div className="w-full">
+            {id === undefined ? <BotaoCadastrar /> : <BotaoAtualizar />}
+          </div>
         )}
       </form>
     </div>
@@ -85,4 +87,3 @@ function FormCategoria() {
 }
 
 export default FormCategoria;
-
