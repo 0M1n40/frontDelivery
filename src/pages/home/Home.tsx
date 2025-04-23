@@ -7,7 +7,7 @@ import BotaoNovoProduto from "../../components/botaoNovoProduto/BotaoNovoProduto
 function Home() {
   return (
     <>
-      <div className="home-container min-h-screen flex flex-col justify-between">
+    <div className="home-container min-h-screen flex flex-col justify-between">
       <div
         className="home-hero text-white px-1 py-22"
         style={{
