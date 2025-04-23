@@ -15,6 +15,7 @@ function App() {
   return (
     <Router>
       <Navbar />
+      
       <div className="min-h-[80vh]">
         <Routes>
           {/* Página inicial */}

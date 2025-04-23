@@ -17,13 +17,10 @@ function Home() {
       >
        <BotaoNovoProduto />
       </div>
-
+        </div> 
         <div className=" flex flex-col items-center justify-center gap-4 mt-10 ">
           <div className="min-h-screen bg-white p-4 lg:p-32 box-border">
           <ModalProduto/></div>
-
-          
-        </div>
       </div>
     </>
   );
