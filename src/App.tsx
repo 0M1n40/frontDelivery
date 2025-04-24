@@ -1,6 +1,4 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import ListaCategoria from "./components/categorias/listacategorias/ListaCategorias";
-import CadastrarCategoria from "./components/categorias/cadastrarcategoria/CadastrarCategoria";
 import DeletarCategoria from "./components/categorias/deletarcategoria/DeletarCategoria";
 import FormCategoria from "./components/categorias/formcategoria/FormCategoria";
 import Footer from "./components/footer/Footer";
@@ -10,6 +8,7 @@ import Cadastro from "./pages/cadastro/Cadastro";
 import FormProduto from "./components/produtos/formprodutos/FormProduto";
 import DeletarProduto from "./components/produtos/deletarproduto/DeletarProduto";
 import Produto from "./pages/produto/Produto";
+import Categoria from "./pages/categoria/Categoria";
 
 function App() {
   return (
@@ -26,10 +25,11 @@ function App() {
           <Route path="/usuarios/cadastrar" element={<Cadastro />} />
 
           {/* Categorias */}
-          <Route path="/categorias" element={<ListaCategoria />} />
-          <Route path="/cadastrar/:id" element={<CadastrarCategoria />} />
+          <Route path="/categorias" element={<Categoria />} />
+          <Route path="/cadastrar" element={<FormCategoria />} />
+          <Route path="/editarcategoria/:id" element={<FormCategoria />} />
           <Route path="/deletarcategoria/:id" element={<DeletarCategoria />} />
-          <Route path="/formcategoria/" element={<FormCategoria />} />
+          {/* <Route path="/formcategoria/" element={<FormCategoria />} /> */}
 
           {/* Produtos */}
           <Route path="/produtos" element={<Produto />} />

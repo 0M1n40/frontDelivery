@@ -6,11 +6,11 @@ body, html {
 
 .navbar-top{
   background-color: #FF0011;
-  position: absolute;
+  /* position: absolute;
   top: 0;
-  right: 0;
+  right: 0; */
   padding: 0.5rem 2rem;
-  z-index: 10;
+  /* z-index: 10; */
 }
 
 /* Container geral da navbar */

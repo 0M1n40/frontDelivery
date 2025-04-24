@@ -1,11 +1,44 @@
-import { useState, useEffect } from "react";
+// import { useNavigate } from "react-router-dom";
 import Categoria from "../../../models/Categoria";
-import CardCategoria from "../cardcategoria/CardCategoria";
+import { useEffect, useState } from "react";
 import { buscar, cadastrar } from "../../../service/Service";
-import SearchBar from "../../../components/searchbar/SearchBar";
-import BotaoCadastrar from "../../botaoCadastrar/BotaoCadastrar";
+import CardCategoria from "../cardcategoria/CardCategoria";
+import SearchBar from "../../searchbar/SearchBar";
 
-function ListaCategoria() {
+
+function ListaCategorias() {
+//   // const navigate = useNavigate();
+//   const [categorias, setCategorias] = useState<Categoria[]>([]);
+
+//   async function buscarCategorias() {
+//     try {
+//       await buscar('/categorias', setCategorias);
+//     } catch (error: any) {
+//       if (error.toString().includes('403')) {
+//       }
+//     }
+//   }
+
+//   useEffect(() => {
+//     buscarCategorias();
+//   }, []);
+
+//   return (
+//     <div className="flex justify-center w-full my-4">
+//       <div className="container flex flex-col">
+//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+//           {categorias.map((categoria) => (
+//             <CardCategoria key={categoria.id} categoria={categoria} />
+//           ))}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default ListaCategorias;
+
+
   const [categorias, setCategorias] = useState<Categoria[]>([]);
   const [nome, setNome] = useState("");
   // const [isLoading, setIsLoading] = useState(false);
@@ -45,7 +78,7 @@ function ListaCategoria() {
 
   return (
     <div className="bg-gray-100 min-h-screen">
-      <div className="container mx-auto px-4 py-6">
+      <div className="container mx-auto px-4 py-6 flex flex-col">
         <div className="mb-8">
           <SearchBar page="category" />
         </div>
@@ -95,5 +128,5 @@ function ListaCategoria() {
     </div>
   );
 }
+  export default ListaCategorias;
 
-export default ListaCategoria;

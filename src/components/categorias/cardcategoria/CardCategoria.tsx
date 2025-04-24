@@ -19,7 +19,7 @@ function CardCategoria({ categoria }: CardCategoriaProps) {
 
             <div className="flex text-sm">
                 <Link 
-                    to={`/cadastrarcategoria/${categoria.id}`} 
+                    to={`/editarcategoria/${categoria.id}`} 
                     className="w-1/2 text-slate-100 bg-indigo-500 hover:bg-indigo-700 
                         flex items-center justify-center py-1.5 transition duration-300"
                 >
